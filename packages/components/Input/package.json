@@ -1,0 +1,23 @@
+{
+  "name": "@drip-ui/input",
+  "private": false,
+  "version": "0.0.0",
+  "description": "Drip UI Input Component",
+  "main": "dist/bundle.js",
+  "scripts": {},
+  "author": "Robin L Denton",
+  "license": "MIT",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Raenton/drip-ui.git",
+    "directory": "packages/components/Input"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@drip-ui/utils",
+  "private": false,
+  "version": "0.0.0",
+  "description": "Drip UI components",
+  "main": "dist/bundle.js",
+  "scripts": {},
+  "author": "Robin L Denton",
+  "license": "MIT",
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Raenton/drip-ui.git",
+    "directory": "packages/utils"
+  }
+}
