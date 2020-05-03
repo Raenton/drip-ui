@@ -5,12 +5,9 @@
     "storybook": "start-storybook",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean && lerna exec -- rimraf dist/",
-    "prebuild": "npm run bootstrap",
-    "prebuild:sub": "npm run prebuild",
-    "prebuild:core": "npm run prebuild",
-    "build": "lerna exec --parallel --scope \"@drip-ui/*(components|utils)\" -- rollup -c ../../rollup.config.js && lerna exec --parallel --scope \"@drip-ui/!(components|utils)*\" -- rollup -c ../../../rollup.config.js",
-    "build:core": "lerna exec --parallel --scope \"@drip-ui/*(components|utils)\" -- rollup -c ../../rollup.config.js -w",
-    "build:sub": "lerna exec --parallel --scope \"@drip-ui/!(components|utils)*\" -- rollup -c ../../../rollup.config.js -w",
+    "build": "npm run build:components && npm run build:subcomponents",
+    "build:components": "lerna exec --parallel --scope \"@drip-ui/components\" -- rollup -c ../../rollup.config.js",
+    "build:subcomponents": "lerna exec --parallel --scope \"@drip-ui/!(components|utils)\" -- rollup -c ../../../rollup.config.js",
     "publish": "npm run build && lerna publish"
   },
   "repository": {
