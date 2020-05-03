@@ -7,7 +7,8 @@
     "clean": "lerna clean && lerna exec -- rimraf dist/",
     "build": "npm run build:components && npm run build:subcomponents",
     "build:components": "lerna exec --parallel --scope \"@drip-ui/components\" -- rollup -c ../../rollup.config.js",
-    "build:subcomponents": "lerna exec --parallel --scope \"@drip-ui/!(components|utils)\" -- rollup -c ../../../rollup.config.js",
+    "build:subcomponents": "lerna exec --parallel --scope \"@drip-ui/!(components|utils)\" -- rollup -c ../../../../rollup.config.js",
+    "watch:subcomponents": "lerna exec --parallel --scope \"@drip-ui/!(components|utils)\" -- rollup -c ../../../../rollup.config.js -w",
     "publish": "npm run build && lerna publish"
   },
   "repository": {
