@@ -1,12 +1,16 @@
 {
   "version": "independent",
   "packages": [
-    "packages/**"
+    "packages/**",
+    "examples/**"
   ],
   "npmClient": "npm",
   "command": {
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
     }
-  }
+  },
+  "ignoreChanges": [
+    "examples/**"
+  ]
 }
